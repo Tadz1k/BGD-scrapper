@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "4b4696e3-78ec-409a-8661-4f7d4d9a16fb",
+		"name": "BGD_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26306770"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/api/ping",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/olx/get_offers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/api/olx/getOffers",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"olx",
+						"getOffers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/otomoto/get_offers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/api/otomoto/getOffers",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"otomoto",
+						"getOffers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/offers/findOffer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"manufacturer\":\"Toyota\",\"lastName\":\"Corolla\"}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/offers/findOffer",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"offers",
+						"findOffer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
