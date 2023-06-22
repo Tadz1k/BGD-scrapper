@@ -7,7 +7,7 @@ class MongoConnection:
         self.client = None
 
     def connect(self):
-        connection_string = f'mongodb://{self.host}:{self.port}/carAds'
+        connection_string = f'mongodb://{self.host}:{self.port}'
         self.client = MongoClient(connection_string)
         return self.client
 
