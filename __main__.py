@@ -16,7 +16,7 @@ def fetch_otomoto():
         # Insert to database
         try:
             details = get_otomoto_offer_details(url)
-            iterator += insert('otomoto', details)
+            iterator += insert('collection_otomoto', details)
         except:
             pass
     print(f"Inserted {iterator} offers to [otomoto] database")
@@ -32,7 +32,7 @@ def fetch_olx():
         # Insert to database
         try:
             details = get_olx_offer_details(url)
-            iterator += insert('olx', details)
+            iterator += insert('collection_olx', details)
         except:
             pass   
     print(f"Inserted {iterator} offers to [olx] database")
