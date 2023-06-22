@@ -19,7 +19,7 @@ The purpose of the application is to gather car ads from multiple webpages for f
 
     1. Create data share
     ```bash
-    sudo mkdir /mnt/bgdstorageolx
+    sudo mkdir /mnt/bgd-olx-fileshare
     ```
     <br />
 
@@ -31,14 +31,13 @@ The purpose of the application is to gather car ads from multiple webpages for f
     <br />
 
     3. Mount disk created in Azure
-    ```bash
-    sudo mount -t cifs //{accountname}.file.core.windows.net/{diskname} /mnt/bgdstorageolx -o vers=3.0,username={username},password={password},dir_mode=0777,file_mode=0777,serverino
-    ```
+
+        This command should be taken from Azure -> Storage Account -> File Share -> Connect -> Linux
 
     4. Run mongo
     ```bash
     sudo docker pull mongo
-    sudo docker run -d -v /mnt/bgdstorageolx:/data/db --name mongodb -p 27017:27017 mongo
+    sudo docker run -d -v /mnt/bgd-olx-fileshare:/data/db --name mongodb -p 27017:27017 mongo
     ```
     <br />
 
@@ -46,3 +45,8 @@ The purpose of the application is to gather car ads from multiple webpages for f
     ```bash
     sudo docker start {containerid} 
     ```
+
+### Connect
+```bash
+sudo docker exec -it mongodb mongosh
+```
