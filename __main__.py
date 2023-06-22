@@ -2,7 +2,7 @@ import os
 import threading
 import time
 from scrapper import *
-from . import mongo_utils
+from mongo_utils import *
 
 
 def fetch_otomoto():
@@ -15,7 +15,7 @@ def fetch_otomoto():
         
         # Insert to database
         try:
-            mongo_utils.insert('otomoto', details)
+            insert('otomoto', details)
         except:
             print("Error: unable to insert to database: OTOMOTO")
 
@@ -29,7 +29,7 @@ def fetch_olx():
 
         # Insert to database
         try:
-            mongo_utils.insert('olx', details)
+            insert('olx', details)
         except:
             print("Error: unable to insert to database: OLX")    
 
