@@ -12,6 +12,7 @@ def insert(database, car):
     car_exists = f'{database}'.find_one({'id': car_id})
 
     if not car_exists:
+        print('Inserting...')
         f'{database}'.insert_one(car)
         return 1
     else:
