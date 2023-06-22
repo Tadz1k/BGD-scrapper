@@ -29,7 +29,7 @@ def fetch_olx():
 
         # Insert to database
         try:
-        mongo_utils.insert('olx', details)
+            mongo_utils.insert('olx', details)
         except:
             print("Error: unable to insert to database: OLX")    
 
