@@ -12,7 +12,10 @@ def insert(database, car):
     try:
         json_data = json.dumps(car)
         car_id = car['id']
-        car_exists = f'{database}'.find_one({'id': car_id})
+        if database == 'collection_otomoto':
+            car_exists = collection_otomoto.find_one({'id': car_id})
+        elif database == 'collection_olx':
+            car_exists = collection_olx.find_one({'id': car_id})
         print(f'car_exists: {car_exists}')
     except:
         return 0
