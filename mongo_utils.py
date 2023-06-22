@@ -9,9 +9,9 @@ collection_name = connection['otomoto']['cars']
 
 def insert(car):
     car = {
-    'id': 1,
-    'name': 'Audi',
-    'price': 52642
+    'id': 2,
+    'name': 'BMW',
+    'price': 12412
     }
     collection_name.insert_one(car)
 
