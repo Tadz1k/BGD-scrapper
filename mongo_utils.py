@@ -2,7 +2,7 @@ from mongo_connection import MongoConnection
 
 # Path: mongo_utils.py
 connection = MongoConnection(host='localhost', port=27017).connect()
-collection_name = connection['olx']['cars']
+collection_name = connection['otomoto']['cars']
 
 
 
