@@ -39,7 +39,6 @@ def get_olx_offers():
     return page_addresses
 
 def get_olx_offer_details(url):
-    url = 'https://www.olx.pl/d/oferta/toyota-corolla-2005r-2-0d4d-CID5-IDUuyOW.html'
     page = requests.get(url, headers=headers).text
     soup = BeautifulSoup(page, "html.parser")
     #Get data from HTML
@@ -74,7 +73,7 @@ def get_olx_offer_details(url):
             offer_data['mileage'] = p_content.replace('Przebieg: ', '')
         if 'Skrzynia biegów' in p_content:
             offer_data['gearbox'] = p_content.replace('Skrzynia biegów: ', '')
-    print(offer_data)
+    return offer_data
 
         
 
@@ -98,7 +97,6 @@ def get_otomoto_offers():
     return all_addresses
 
 def get_otomoto_offer_details(url):
-    url = 'https://www.otomoto.pl/osobowe/oferta/audi-rs5-rs5-cabrio-jak-nowy-kute-2-czesciowe-felgi-z-dawmac-eu-ID6Dstj6.html'
     page = requests.get(url, headers=headers).text
     soup = BeautifulSoup(page, "html.parser")
     title = soup.find('h1').text
@@ -140,10 +138,3 @@ def get_otomoto_offer_details(url):
             offer_data['horsepower'] = value.strip()
 
     return offer_data
-
-
-#offers = get_olx_offers()
-get_olx_offer_details('x')
-#otomoto_offers = get_otomoto_offers()
-#print(otomoto_offers)
-#get_otomoto_offer_details('x')

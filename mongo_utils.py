@@ -13,7 +13,3 @@ def insert(database, car):
         collection_otomoto.insert_one(car)
     elif database == 'olx':
         collection_olx.insert_one(car)
-        
-
-car_dict = {'id': '123', 'title': 'test', 'description': 'test', 'manufacturer': 'test', 'model': 'test', 'fuel': 'test', 'engine': 'test', 'mileage': 'test',}
-insert('otomoto', car_dict)
