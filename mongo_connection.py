@@ -6,9 +6,9 @@ class MongoConnection:
         self.port = port
 
     def connect(self):
-        connection_string = f'mongodb://{self.host}:{self.port}/carDatabase'
+        connection_string = f'mongodb://{self.host}:{self.port}/carAds'
         client = MongoClient(connection_string)
-        return client['carDatabase']
+        return client
 
     def close(self):
         self.client.close()

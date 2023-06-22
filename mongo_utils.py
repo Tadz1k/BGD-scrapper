@@ -2,7 +2,8 @@ from mongo_connection import MongoConnection
 
 # Path: mongo_utils.py
 connection = MongoConnection(host='localhost', port=27017).connect()
-collection_name = connection['cars']
+collection_name = connection['olx']
+
 
 
 
@@ -13,3 +14,5 @@ def insert(car):
     'price': 52642
     }
     collection_name.insert_one(car)
+
+insert('x')
