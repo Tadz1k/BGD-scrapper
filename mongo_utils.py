@@ -5,11 +5,11 @@ connection = MongoConnection(host='localhost', port=27017).connect()
 collection_otomoto = connection['carsAds']['otomoto']
 collection_olx = connection['carsAds']['olx']
 
-
-
 def insert(database, car):
     json_data = json.dumps(car)
-    if database == 'otomoto':
-        collection_otomoto.insert_one(car)
-    elif database == 'olx':
-        collection_olx.insert_one(car)
+
+    car_id = json_data.get('id')
+    car_exists = f'{database}'.find_one({'id': car_id})
+
+    if not car_exists:
+        f'{database}'.insert_one(car)
