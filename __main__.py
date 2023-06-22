@@ -14,7 +14,7 @@ def fetch_otomoto():
         
         # Insert to database
         try:
-            details = get_olx_offer_details(url)
+            details = get_otomoto_offer_details(url)
             insert('otomoto', details)
         except:
             pass

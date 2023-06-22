@@ -50,6 +50,7 @@ The purpose of the application is to gather car ads from multiple webpages for f
 ```bash
 sudo docker exec -it mongodb mongosh
 ```
+<br />
 
 ## Run the application
 1. Clone repository
