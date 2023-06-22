@@ -11,13 +11,13 @@ def fetch_otomoto():
     print("Inserting to database... OTOMOTO")
     for offer in offers:
         url = 'https://www.otomoto.pl' + offer
-        details = get_olx_offer_details(url)
         
         # Insert to database
         try:
+            details = get_olx_offer_details(url)
             insert('otomoto', details)
         except:
-            print("Error: unable to insert to database: OTOMOTO")
+            pass
 
 def fetch_olx():
     print("Fetching OLX...")
@@ -25,13 +25,13 @@ def fetch_olx():
     print("Inserting to database... OLX")
     for offer in offers:
         url = 'https://www.olx.pl' + offer
-        details = get_olx_offer_details(url)
 
         # Insert to database
         try:
+            details = get_olx_offer_details(url)
             insert('olx', details)
         except:
-            print("Error: unable to insert to database: OLX")    
+            pass   
 
 
 def main():
