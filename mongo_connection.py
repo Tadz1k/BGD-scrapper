@@ -9,7 +9,7 @@ class MongoConnection:
     def connect(self):
         connection_string = f'mongodb://{self.host}:{self.port}/carAds'
         self.client = MongoClient(connection_string)
-        return client
+        return self.client
 
     def close(self):
         self.client.close()
