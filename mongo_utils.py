@@ -2,8 +2,8 @@ from mongo_connection import MongoConnection
 import json
 
 connection = MongoConnection(host='localhost', port=27017).connect()
-collection_otomoto = connection['carAds']['otomoto']
-collection_olx = connection['carAds']['olx']
+collection_otomoto = connection['carsAds']['otomoto']
+collection_olx = connection['carsAds']['olx']
 
 
 
