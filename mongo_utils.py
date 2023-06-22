@@ -10,6 +10,7 @@ def insert(database, car):
 
     car_id = json_data.get('id')
     car_exists = f'{database}'.find_one({'id': car_id})
+    print(car_exists)
 
     if not car_exists:
         print('Inserting...')
