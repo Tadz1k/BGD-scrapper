@@ -16,4 +16,4 @@ def insert(database, car):
         
 
 car_dict = {'id': '123', 'title': 'test', 'description': 'test', 'manufacturer': 'test', 'model': 'test', 'fuel': 'test', 'engine': 'test', 'mileage': 'test',}
-insert(car_dict)
+insert('otomoto', car_dict)
