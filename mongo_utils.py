@@ -13,3 +13,6 @@ def insert(database, car):
 
     if not car_exists:
         f'{database}'.insert_one(car)
+        return 1
+    else:
+        return 0
