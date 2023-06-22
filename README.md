@@ -50,3 +50,21 @@ The purpose of the application is to gather car ads from multiple webpages for f
 ```bash
 sudo docker exec -it mongodb mongosh
 ```
+
+## Run the application
+1. Clone repository
+```bash
+git clone https://github.com/Tadz1k/BGD-scrapper
+```
+
+2. Set up Python environment
+```bash
+python3 -m venv venv
+source venv/vin/activate
+pip install -r BGD-scrapper/requirements.txt
+```
+
+3. Run application
+```bash
+python3 ./BGD-scrapper 
+```
