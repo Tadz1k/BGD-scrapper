@@ -10,7 +10,7 @@ collection_olx = connection['olx']['cars']
 def insert(database, car):
     json_data = json.dumps(car)
     if database == 'otomoto':
-        collection_otomoot.insert_one(car)
+        collection_otomoto.insert_one(car)
     elif database == 'olx':
         collection_olx.insert_one(car)
         
