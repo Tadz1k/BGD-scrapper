@@ -1,18 +1,19 @@
 from mongo_connection import MongoConnection
+import json
 
-# Path: mongo_utils.py
 connection = MongoConnection(host='localhost', port=27017).connect()
-collection_name = connection['otomoto']['cars']
+collection_otomoto = connection['otomoto']['cars']
+collection_olx = connection['olx']['cars']
 
 
 
+def insert(database, car):
+    json_data = json.dumps(car)
+    if database == 'otomoto':
+        collection_otomoot.insert_one(car)
+    elif database == 'olx':
+        collection_olx.insert_one(car)
+        
 
-def insert(car):
-    car = {
-    'id': 2,
-    'name': 'BMW',
-    'price': 12412
-    }
-    collection_name.insert_one(car)
-
-insert('x')
+car_dict = {'id': '123', 'title': 'test', 'description': 'test', 'manufacturer': 'test', 'model': 'test', 'fuel': 'test', 'engine': 'test', 'mileage': 'test',}
+insert(car_dict)
