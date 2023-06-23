@@ -69,3 +69,11 @@ pip install -r BGD-scrapper/requirements.txt
 ```bash
 python3 ./BGD-scrapper 
 ```
+
+<br />
+
+## Additional steps
+1. Set up cron to run every 4h
+```bash
+0 */4 * * * /bin/bash -c 'source /home/bgd/venv/bin/activate && pip install -r /home/bgd/BGD-scrapper/requirements.txt && python3 /home/bgd/BGD-scrapper' >> /home/bgd/logs/bgd-scrapper-$(date +\%Y\%m\%d\%H).log 2>&1
+```
